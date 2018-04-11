@@ -1,0 +1,1059 @@
+/* === FARBEN ===
+
+Orange: #dd5638 oder rgb(221, 86, 56)
+Dunkelgrau: #3d3f45
+Hellgrau: rgba(226, 226, 226, 0.7)
+Weiß: #FFFFFF
+
+*/
+
+/* === GLOBALES === */
+
+html {
+  overflow-x: hidden;
+}
+
+html, body {
+  padding: 0;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1 { font-size: 2rem;   }
+h2 { font-size: 1.6rem; }
+h3 { font-size: 1.4rem; }
+h4 { font-size: 1.3rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1.1rem; }
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {
+  border-color: #dd5638;
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(221, 86, 56, 0.6);
+}
+
+/* === GENERELLES === */
+
+.text-zentriert {
+  text-align: center;
+}
+
+.haupttext {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+
+.introduction h1 {
+  text-transform: uppercase;
+}
+
+.introduction h2 {
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.spacer-sm-top {
+  margin-top: 2rem;
+}
+
+.spacer-sm-bottom {
+  margin-bottom: 2rem;
+}
+
+.spacer-sm-both {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.spacer-md-top {
+  margin-top: 4rem;
+}
+
+.spacer-md-bottom {
+  margin-bottom: 4rem;
+}
+
+.spacer-md-both {
+  margin-bottom: 4rem;
+  margin-top: 4rem;
+}
+
+.spacer-xl-top {
+  margin-top: 8rem;
+}
+
+.spacer-xl-bottom {
+  margin-bottom: 8rem;
+}
+
+.spacer-xl-both {
+  margin-bottom: 8rem;
+  margin-top: 8rem;
+}
+
+.white-layer-top-header {
+  height: 70px;
+  width: 1920px;
+  background-color: #FFF;
+  transform: rotate(-1deg);
+  transform: skew(0deg,-1deg);
+  position: relative;
+  top: -110px;
+  margin: auto;
+}
+
+.transparent-layer-top-header {
+  height: 100px;
+  width: 1920px;
+  background-color: rgba(226, 226, 226, 0.7);
+  transform: rotate(-2deg);
+  transform: skew(0deg,-2deg);
+  position: relative;
+  top: -15px;
+  margin: auto;
+}
+
+.white-layer-bottom-header {
+  height: 70px;
+  width: 1920px;
+  background-color: #FFF;
+  transform: rotate(-1deg);
+  transform: skew(0deg,-1deg);
+  position: relative;
+  top: 195px;
+  margin: auto;
+}
+
+.transparent-layer-bottom-header {
+  height: 70px;
+  width: 1920px;
+  background-color: rgba(226, 226, 226, 0.7);
+  transform: rotate(-2deg);
+  transform: skew(0deg,-2deg);
+  position: relative;
+  top: 240px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.transparent-layer-bottom-header2 {
+  height: 70px;
+  width: 1920px;
+  background-color: rgba(226, 226, 226, 0.7);
+  transform: rotate(-2deg);
+  transform: skew(0deg,-2deg);
+  position: relative;
+  top: 80px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.white-layer-bottom-header2 {
+  height: 70px;
+  width: 1920px;
+  background-color: #FFF;
+  transform: rotate(-1deg);
+  transform: skew(0deg,-1deg);
+  position: relative;
+  top: 35px;
+  margin: auto;
+}
+
+.sidebar-search {
+  border-radius: 0;
+  width: 100%;
+  padding: .4rem .6rem;
+}
+
+/* === NAVIGATION === */
+
+#navigation {
+  font-size: 1.2rem;
+  padding: 20px 10% 0 10%;
+}
+
+#navbar-brand {
+  font-size: 2rem;
+}
+
+@media (max-width:992px) {
+  .navbar-logo {
+    height: 30px;
+    width: 30px;
+    margin-top: 12px;
+  }
+
+  .brand-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+  #navbar {
+    font-size: 0.9rem;
+    padding-top: 10px;
+  }
+}
+
+@media (max-width:466px) {
+  .navbar-logo {
+    height: 30px;
+    width: 30px;
+    margin-top: 12px;
+  }
+
+  .brand-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+}
+
+@media (max-width:322px) {
+  .navbar-logo {
+    height: 25px;
+    width: 25px;
+    margin-top: 15px;
+  }
+
+  .brand-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+}
+
+li.nav-link > a {
+  color: inherit !important;
+}
+
+/* === FOOTER === */
+
+.footer {
+  height: auto;
+  background-color: #3d3f45;
+  padding: 30px 0 15px 0;
+  color: #FFF;
+}
+
+/* Bei kleinen Geräten */
+
+@media (min-width:1px) {
+  .footer ul {
+    margin: 20px 0 0 0;
+    padding-left: 0;
+  }
+}
+
+/* Ab größeren Tablets und kleinere Laptops */
+
+@media (min-width:1025px) {
+  .footer ul {
+    margin: 0;
+    float: right;
+  }
+}
+
+.footer ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.footer ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer ul li a:hover {
+  color: #dd5638;
+  cursor: pointer;
+}
+
+.footer ul li a:active {
+  color: #dd5638;
+}
+
+.footer ul li a:focus {
+  color: #dd5638;
+}
+
+/* === STARTSEITE === */
+
+/* === HEADERBILD === */
+
+#headerbild {
+  background: url("./../img/hero-bg.jpg") no-repeat center center;
+  background-position: 50% 0;
+  min-height: 500px;
+  position: relative;
+}
+
+#headerbild2 {
+  background: url("./../img/hero-bg-klein.jpg") no-repeat center center;
+  background-position: 50% 0;
+  min-height: 300px;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+/* === HERO-BEREICH === */
+
+#logo-icon:hover {
+  transform: rotate(360deg);
+}
+
+#logo-icon {
+  margin-bottom: 40px;
+  transition: transform 1.5s ease-in-out;
+}
+
+#logo-icon:hover {
+  transform: rotate(360deg);
+}
+
+.btn-typ-1 {
+  height: 60px;
+  background-color: transparent;
+  border: 2px solid #3d3f45;
+  font-size: 1rem;
+  color: #3d3f45;
+  font-weight: bold;
+  transition: border 0.5s ease-in-out;
+  padding: 0 35px 0 35px;
+}
+
+.btn-typ-1:hover {
+  border: 2px solid #dd5638;
+  cursor: pointer;
+}
+
+.btn-typ-1:active {
+  border: 2px solid #dd5638;
+  color: #A69292;
+}
+
+.btn-typ-1:focus {
+  outline: 1px solid #dd5638;
+}
+
+/* Bei kleinen Geräten */
+
+@media (min-width:1px) {
+  .btn-typ-1 {
+    width: 150px;
+  }
+}
+
+/* Ab größeren Tablets und kleinere Laptops */
+
+@media (min-width:1025px) {
+  .btn-typ-1{
+    width: 200px;
+  }
+}
+
+/* ===KURSPHILOSOPHIE-BEREICH=== */
+
+.sprite {
+  width: 80px;
+  height: 80px;
+  background: url("./../img/sprite.png") no-repeat;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.sprite-code        { background-position: 0 0;      }
+.sprite-bubbles     { background-position: -80px 0;  }
+.sprite-education   { background-position: -160px 0; }
+
+.kreis {
+  margin: 0 auto 30px auto;
+  padding-top: 18px;
+  width: 120px;
+  height: 120px;
+  border-radius: 100%;
+  background-color: #3d3f45;
+  transition: transform 1.5s ease-in-out;
+  transition: transform 1.5s ease-in-out;
+}
+
+.kreis:hover {
+  transform: rotate(360deg);
+}
+
+/* === VIDEO-BEREICH === */
+
+/* Bei kleinen Geräten */
+
+@media (min-width:1px) {
+  #promo-video {
+    width: 90%;
+    margin: 20px 0 0 0;
+  }
+}
+
+/* Ab größeren Tablets und kleinere Laptops */
+
+@media (min-width:1025px) {
+  #promo-video {
+    width: 50%;
+    margin: 20px 0 0 0;
+  }
+}
+
+/* === ZITAT-BEREICH === */
+
+#zitat-bereich {
+  height: 300px;
+  background: url('../img/webdesign-bg.jpg') 50% 100% repeat fixed;
+  background-size: cover;
+  text-align: center;
+  position: relative;
+  color: #FFF;
+}
+
+#zitat-bereich > .container {
+  position: relative;
+  top: 40%;
+}
+
+#zitat {
+  margin-top: 20px;
+}
+
+@media (max-width:768px) {
+  #zitat {
+    margin-top: 40px;
+    font-size: 0.98rem;
+  }
+}
+
+@media (max-width:417px) {
+  #zitat {
+    display: none;
+  }
+
+
+  #zitat-bereich {
+    display: none;
+  }
+}
+
+.transparent-top-layer {
+  height: 50px;
+  width: 1920px;
+  background-color: rgba(226, 226, 226, 0.7);
+  transform: rotate(-2deg);
+  transform: skew(0deg,-2deg);
+  position: absolute;
+  top: 65px;
+}
+
+.white-top-layer {
+  height: 70px;
+  width: 1920px;
+  background-color: #FFF;
+  transform: rotate(-1deg);
+  transform: skew(0deg,-1deg);
+  position: absolute;
+  top: 15px;
+  z-index: 1;
+}
+
+.transparent-bottom-layer {
+  height: 70px;
+  width: 1920px;
+  background-color: rgba(226, 226, 226, 0.7);
+  transform: rotate(-2deg);
+  transform: skew(0deg,-2deg);
+  position: absolute;
+  bottom: 3px;
+}
+
+.white-bottom-layer {
+  height: 70px;
+  width: 1920px;
+  background-color: #FFF;
+  transform: rotate(-1deg);
+  transform: skew(0deg,-1deg);
+  position: absolute;
+  bottom: -20px;
+  z-index: 1;
+}
+
+.transparent-top-layer2 {
+  height: 50px;
+  width: 1920px;
+  background-color: rgba(226, 226, 226, 0.7);
+  transform: rotate(-2deg);
+  transform: skew(0deg,-2deg);
+  position: absolute;
+  top: 0;
+}
+
+.white-top-layer2 {
+  height: 70px;
+  width: 1920px;
+  background-color: #FFF;
+  transform: rotate(-1deg);
+  transform: skew(0deg,-1deg);
+  position: absolute;
+  top: -50px;
+  z-index: 1;
+}
+
+.transparent-bottom-layer2 {
+  height: 70px;
+  width: 1920px;
+  background-color: rgba(226, 226, 226, 0.7);
+  transform: rotate(-2deg);
+  transform: skew(0deg,-2deg);
+  position: absolute;
+  bottom: -28px;
+}
+
+.white-bottom-layer2 {
+  height: 70px;
+  width: 1920px;
+  background-color: #FFF;
+  transform: rotate(-1deg);
+  transform: skew(0deg,-1deg);
+  position: absolute;
+  bottom: -50px;
+}
+
+/* === ÜBER-MICH-BEREICH === */
+
+#über-mich-bereich {
+  font-size: 1.2rem;
+}
+
+/* Bei kleinen Geräten */
+
+@media (min-width:1px) {
+  #über-mich-bereich {
+    background: none;
+  }
+}
+
+/* Ab größeren Tablets und kleinere Laptops */
+
+@media (min-width:1285px) {
+  #über-mich-bereich {
+    background: url("./../img/ruben-winkler.png") no-repeat right;
+    background-size: auto 100%;
+    background-position: 80%;
+  }
+}
+
+#über-mich-bereich-heading {
+  margin-bottom: 50px;
+}
+
+#über-mich-bereich-einleitung {
+  font-weight: 600;
+}
+
+#über-mich-bereich-name {
+  font-size: 1.4rem;
+  margin-left: 10px;
+  color: #ccc;
+}
+
+.social-badge {
+  background-color: #ccc;
+  color: #FFF;
+  font-size: 24px;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 42px;
+  margin: 0 5px 20px 0;
+  padding: 0;
+  border-radius: 50px;
+  display: inline-block;
+  margin-bottom: 50px;
+}
+
+.fab, .fas {
+  color: white;
+}
+
+.social-badge.udemy:hover {
+  background-color: #E25655;
+  color: #FFF;
+}
+
+.social-badge.xing:hover {
+  background-color: #CFDC00;
+  color: #FFF;
+}
+
+.social-badge.linkedin:hover {
+  background-color: #0077B5;
+  color: #FFF;
+}
+
+.social-badge.facebook:hover {
+  background-color: #3b5998;
+  color: #FFF;
+}
+
+.social-badge.twitter:hover {
+  background-color: #55acee;
+  color: #FFF;
+}
+
+.social-badge.gplus:hover {
+  background-color: #db4b39;
+  color: #FFF;
+}
+
+.social-badge.youtube:hover {
+  background-color: #cc181e;
+  color: #FFF;
+}
+
+.udemy-logo {
+  width: 28px;
+  height: auto;
+  margin-bottom: 3px;
+}
+
+/* === KURSE-SEITE === */
+
+.course-teaser {
+  background-color: rgba(240, 240, 240, 0.2);
+  color: #3d3f45;
+  padding-bottom: 20px;
+  padding-top: 2rem;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.course-teaser h2 {
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 1rem;
+}
+
+.course-teaser h3 {
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  color: #3d3f45;
+}
+
+.course-teaser-img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 30px;
+}
+
+/* === KURS-SEITE === */
+
+.course-video {
+  display: block;
+  width: 65%;
+  margin: 2rem auto 0 auto;
+}
+
+.course-description h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  margin-top: 2.5rem;
+}
+
+.course-feature {
+  margin-bottom: 1.5rem;
+}
+
+.course-feature h2 {
+  margin-bottom: 2rem;
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.course-number {
+  height: 50px;
+  width: 50px;
+  background-color: #dd5638;
+  border-radius: 50%;
+  line-height: 50px;
+  font-size: 1rem;
+  color: #FFF;
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+/* === BLOG-SEITE === */
+
+.blogpost-teaser {
+  background-color: rgba(240, 240, 240, 0.2);
+  padding-top: 1.5rem;
+}
+
+.blogpost-teaser-title {
+  margin-bottom: 1.2rem;
+}
+
+.blogpost-teaser-meta {
+  color: #3d3f45;
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.blog-thumbnail {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.blogpost-teaser-text {
+  padding: 1rem 2rem 2rem 2rem;
+}
+
+.blogpost-teaser a:link {
+  color: #000;
+  transition: color 0.5s ease-in-out;
+}
+
+.blogpost-teaser a:hover {
+  color: #dd5638;
+  text-decoration: none;
+}
+
+.blogpost-teaser a:active {
+  color: #dd5638;
+  text-decoration: none;
+}
+
+.blogpost-teaser a:visited {
+  color: #000;
+  text-decoration: none;
+}
+
+.blogpost-teaser .fa {
+  color: #3d3f45;
+  margin-left: .5rem;
+  margin-right: .2rem;
+}
+
+.newer-blog-posts {
+  float: left;
+  margin-bottom: 3rem;
+  display: inline-block;
+}
+
+.older-blog-posts{
+  float: right;
+  margin-bottom: 3rem;
+  display: inline-block;
+}
+
+.newer-blog-posts > a {
+  color: #000 !important;
+}
+
+.older-blog-posts > a {
+  color: #000 !important;
+}
+
+/* === WIDGETS === */
+
+.widget {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  text-align: left;
+}
+
+.widget h4 {
+  margin: 0 0 .8rem;
+  padding: 0 0 .8rem;
+  border-bottom: solid 1px #ddd;
+  text-align: center;
+}
+
+.widget ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.widget ul li {
+  margin: 0 0 .4rem;
+}
+
+.widget ul li:hover {
+  position: relative;
+  left: .1rem;
+}
+
+.widget ul li a {
+  color: #dd5638;
+}
+
+.widget ul li a:hover {
+  color: #dd5638;
+}
+
+.widget ul li a:active {
+  color: #dd5638;
+}
+
+.widget ul li a:visited {
+  color: #dd5638;
+}
+
+/* === BLOGPOST === */
+
+.blogpost-meta {
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.blogpost-meta .fa {
+  color: #3d3f45;
+  font-size: 0.8rem;
+  margin-right: .2rem;
+  margin-left: 1rem;
+}
+
+.blog-text {
+  font-size: 1.2rem;
+  text-align: left;
+}
+
+.blog-einleitung {
+  font-weight: bold;
+}
+
+.blogpost-meta a:link {
+  color: #000;
+  transition: color 0.5s ease-in-out;
+}
+
+.blogpost-meta a:hover {
+  color: #dd5638;
+  text-decoration: none;
+}
+
+.blogpost-meta a:active {
+  color: #dd5638;
+  text-decoration: none;
+}
+
+.blogpost-meta a:visited {
+  color: #000;
+  text-decoration: none;
+}
+
+/* === KOMMENTARE === */
+
+#comments .container {
+  padding-top: 4rem;
+}
+
+#comments h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+#comments h4 {
+  font-size: 1.3em;
+}
+
+#comments ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#comments ol li {
+  background: rgba(240, 240, 240, 0.4);
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+}
+
+#comments ol li ol.children {
+  padding: 0;
+  list-style: none;
+}
+
+#leave-comment {
+  margin: 5rem 0 0;
+  padding: 3rem 0 0;
+  border-top: solid 1px #eee;
+}
+
+#leave-comment h3 {
+  margin-bottom: 2rem;
+}
+
+
+/* === ÜBER-MICH-SEITE === */
+
+#über-mich {
+  font-size: 1.2rem;
+}
+
+/* Bei kleinen Geräten */
+
+@media (min-width:1px) {
+  #über-mich {
+    background: none;
+  }
+}
+
+/* Ab größeren Tablets und kleinere Laptops */
+
+@media (min-width:1285px) {
+  #über-mich {
+    background: url("./../img/ruben-winkler.png") no-repeat right;
+    background-size: auto 100%;
+    background-position: 80%;
+  }
+}
+
+/* === RESSOURCEN-SEITE === */
+
+.ressource {
+  background-color: rgba(240, 240, 240, 0.2);
+  color: #3d3f45;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.ressource p {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.ressource-img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 30px;
+}
+
+.btn-typ-3 {
+  background-color: transparent;
+  border: 2px solid #3d3f45;
+  color: #3d3f45;
+  max-width: 250px;
+  width: 60%;
+  font-size: 1rem;
+  padding: 5px 10px 5px 10px;
+  font-family: inherit;
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  transition: border 0.5s ease-in-out;
+}
+
+.btn-typ-3:hover {
+  border: 2px solid #dd5638;
+}
+
+.btn-typ-3:active {
+  border: 2px solid #dd5638;
+}
+
+.btn-typ-3:focus {
+  border: 2px solid #dd5638;
+}
+
+/* === KONTAKT-SEITE === */
+
+.input-on-light {
+  background-color: transparent;
+  border: 2px solid #3d3f45;
+  width: 100%;
+  height: 40px;
+  font-size: 1rem;
+  padding: 5px 10px 5px 10px;
+  margin-bottom: 15px;
+  transition: border 0.5s ease-in-out;
+}
+
+.input-on-light:focus {
+  border: 2px solid #dd5638;
+  outline: none;
+}
+
+.input-on-light::placeholder {
+  color: #3d3f45;
+}
+
+.textarea-on-light {
+  background-color: transparent;
+  border: 2px solid #3d3f45;
+  width: 100%;
+  font-size: 1rem;
+  padding: 5px 10px 5px 10px;
+  color: inherit;
+  font-family: inherit;
+  transition: border 0.5s ease-in-out;
+}
+
+.textarea-on-light:focus {
+  border: 2px solid #dd5638;
+  outline: none;
+}
+
+.textarea-on-light::placeholder {
+  color: #3d3f45;
+}
+
+.btn-typ-2 {
+  background-color: transparent;
+  border: 2px solid #3d3f45;
+  color: #3d3f45;
+  width: 100%;
+  font-size: 1rem;
+  padding: 5px 10px 5px 10px;
+  font-family: inherit;
+  font-weight: bold;
+  margin-bottom: 30px;
+  margin-top: 10px;
+  transition: border 0.5s ease-in-out;
+}
+
+.btn-typ-2:hover {
+  border: 2px solid #dd5638;
+}
+
+.btn-typ-2:active {
+  border: 2px solid #dd5638;
+}
+
+.btn-typ-2:focus {
+  border: 2px solid #dd5638;
+}
+
+/* === IMPRESSUM-SEITE === */
