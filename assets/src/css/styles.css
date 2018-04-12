@@ -743,8 +743,8 @@ li.nav-link > a {
   transition: color 0.5s ease-in-out;
 }
 
-.blogpost-teaser a:hover {
-  color: #dd5638;
+.blogpost-teaser a:visited {
+  color: #000;
   text-decoration: none;
 }
 
@@ -753,8 +753,8 @@ li.nav-link > a {
   text-decoration: none;
 }
 
-.blogpost-teaser a:visited {
-  color: #000;
+.blogpost-teaser a:hover {
+  color: #dd5638;
   text-decoration: none;
 }
 
@@ -767,7 +767,6 @@ li.nav-link > a {
 .newer-blog-posts {
   float: left;
   margin-bottom: 3rem;
-  display: inline-block;
 }
 
 .older-blog-posts{
@@ -814,20 +813,34 @@ li.nav-link > a {
   left: .1rem;
 }
 
-.widget ul li a {
+.widget ul li a,
+.widget a.tag-cloud-link {
   color: #dd5638;
 }
 
-.widget ul li a:hover {
+.widget ul li a:active,
+.widget a.tag-cloud-link {
   color: #dd5638;
 }
 
-.widget ul li a:active {
+.widget ul li a:visited,
+.widget a.tag-cloud-link {
   color: #dd5638;
 }
 
-.widget ul li a:visited {
+.widget ul li a:hover,
+.widget a.tag-cloud-link {
   color: #dd5638;
+}
+
+.tag-cloud-link {
+  font-size: 1rem !important;
+  display: block;
+}
+
+.tag-cloud-link:hover {
+  position: relative;
+  left: .1rem;
 }
 
 /* === BLOGPOST === */
@@ -1057,3 +1070,31 @@ li.nav-link > a {
 }
 
 /* === IMPRESSUM-SEITE === */
+
+/* === 404-SEITE === */
+
+h2 > a {
+  transition: color .5s ease-in-out;
+}
+
+h2 > a:link {
+  color: #000;
+}
+
+h2 > a:visited {
+  color: #000;
+}
+
+h2 > a:active {
+  color: #dd5638;
+}
+
+h2 > a:hover {
+  color: #dd5638;
+}
+
+#404-search-form-container input {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}

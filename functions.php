@@ -28,3 +28,9 @@ function rw_move_comment_field_to_bottom( $fields ) {
 }
 
 add_filter( 'comment_form_fields', 'rw_move_comment_field_to_bottom' );
+
+function new_excerpt_more($more) {
+    global $post;
+ return ' <a class="moretag" href="'. get_permalink($post->ID) . '">...weiterlesen</a>';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
