@@ -9,7 +9,7 @@
     <div class="row">
       <div class="col-12">
         <div class="introduction">
-          <h1>#BLOG</h1>
+          <h1>#KATEGORIE</h1>
           <p class="haupttext">
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
               magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
@@ -68,13 +68,13 @@
 
                 }
             } else {
-
             ?>
 
-            <p>Aktuell gibt es leider noch keine Beiträge.</p>
+            <p>In dieser Kategorie gibt es leider noch keine Beiträge. Aber du kannst gerne im <a href="<?php echo esc_url( home_url( '/blog/' ) ); ?>">Blog</a> weitersuchen.</p>
 
             <?php
             }
+
             ?>
 
             <?php if( get_previous_posts_link() ) {

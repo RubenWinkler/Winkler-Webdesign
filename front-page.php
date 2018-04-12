@@ -4,16 +4,35 @@
 
 <!-- HERO-BEREICH -->
 
+<?php
+
+//Advanced Custom Fields
+$logo               =       get_field("logo");
+$slogan             =       get_field("slogan");
+$sub_slogan         =       get_field("sub_slogan");
+$button_text        =       get_field("button_text");
+$button_url         =       get_field("button_url");
+
+?>
+
 <section>
     <div class="container spacer-sm-top spacer-xl-bottom">
         <div class="row">
             <div class="col-12 text-zentriert">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/Logo-Icon.png" id="logo-icon">
-                <h2>#WEBDESIGN DURCH E-LEARNING LERNEN!</h2>
+                <?php if( !empty($logo) ) : ?>
+                <img src="<?php echo $logo; ?>" id="logo-icon">
+                <?php endif; ?>
+                <?php if( !empty($slogan) ) : ?>
+                <h2><?php echo $slogan; ?></h2>
+                <?php endif; ?>
+                <?php if( !empty($sub_slogan) ) : ?>
                 <p class="haupttext">
-                    Der beste Ort für jeden der Webdesign von Grund auf lernen will - hier gibt es keine halben Sachen.
+                    <?php echo $sub_slogan; ?>
                 </p>
-                <button type="submit" class="btn-typ-1">Kurse ansehen!</button>
+                <?php endif; ?>
+                <?php if( !empty($button_text) && !empty($button_url) ) : ?>
+                <a href="<?php echo $button_url; ?>" class="btn-typ-1"><?php echo $button_text; ?></a>
+                <?php endif; ?>
             </div>
         </div>
     </div>

@@ -19,19 +19,20 @@
   </div>
   <div class="container">
     <div class="row">
-        <div class="col-12 spacer-sm-bottom" id="404-search-form-container">
-            <?php get_search_form(); ?>
-        </div>
-    </div>
-    <div class="row">
       <div class="col-xl-6 col-md-6 col-sm-12 col-xs-12">
         <div class="container">
         <h2><a href="<?php echo esc_url( home_url( '/blog/' ) ); ?>">#BLOG</a></h2>
+        <div class="row">
+            <div class="col-12 spacer-sm-top col-no-padding">
+                <?php get_search_form(); ?>
+            </div>
+        </div>
 
-        <?php 
-        $wpb_all_query = new WP_Query(array('post_type'=>'post', 'post_status'=>'publish', 'posts_per_page'=>-1)); ?>
+        <?php
+
+        $wpb_all_query = new WP_Query(array('post_type'=>'post', 'post_status'=>'publish', 'posts_per_page'=>4));
         
-        <?php if ( $wpb_all_query->have_posts() ) : ?>
+        if ( $wpb_all_query->have_posts() ) : ?>
         
             <!-- the loop -->
             <?php while ( $wpb_all_query->have_posts() ) : $wpb_all_query->the_post(); ?>

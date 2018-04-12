@@ -1,11 +1,8 @@
 /* === FARBEN ===
-
-Orange: #dd5638 oder rgb(221, 86, 56)
-Dunkelgrau: #3d3f45
-Hellgrau: rgba(226, 226, 226, 0.7)
-Weiß: #FFFFFF
-
-*/
+ * Orange:        #dd5638 oder rgb(221, 86, 56)
+ * Dunkelgrau:    #3d3f45
+ * Hellgrau:      rgba(226, 226, 226, 0.7)
+ */
 
 /* === GLOBALES === */
 
@@ -13,12 +10,10 @@ html {
   overflow-x: hidden;
 }
 
-html, body {
-  padding: 0;
-}
-
 body {
-  font-family: 'Raleway', sans-serif;
+  padding: 0;
+  font-family: "Raleway", "Helvetica Neue", sans-serif;
+  font-size: 16px;
 }
 
 * {
@@ -31,27 +26,6 @@ h3 { font-size: 1.4rem; }
 h4 { font-size: 1.3rem; }
 h5 { font-size: 1.2rem; }
 h6 { font-size: 1.1rem; }
-
-textarea:focus,
-input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="datetime"]:focus,
-input[type="datetime-local"]:focus,
-input[type="date"]:focus,
-input[type="month"]:focus,
-input[type="time"]:focus,
-input[type="week"]:focus,
-input[type="number"]:focus,
-input[type="email"]:focus,
-input[type="url"]:focus,
-input[type="search"]:focus,
-input[type="tel"]:focus,
-input[type="color"]:focus,
-.uneditable-input:focus {
-  border-color: #dd5638;
-  outline: 0;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(221, 86, 56, 0.6);
-}
 
 /* === GENERELLES === */
 
@@ -110,6 +84,175 @@ input[type="color"]:focus,
 .spacer-xl-both {
   margin-bottom: 8rem;
   margin-top: 8rem;
+}
+
+.col-no-padding {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+/* === NAVIGATION === */
+
+#navigation {
+  font-size: 1.25rem;
+  padding: 1.5rem 10% 1.5rem 10%;
+  height: 75px;
+}
+
+#navbar-brand {
+  font-size: 2rem;
+}
+
+@media (max-width: 1088px) {
+
+  .navbar-logo {
+    height: 40px;
+    width: 40px;
+    margin-top: 1px;
+  }
+
+  #navbar-brand {
+    font-size: 1.8rem;
+  }
+
+  #navigation {
+    font-size: 1.15rem;
+  }
+
+}
+
+@media (max-width: 1000px) {
+  .navbar-logo {
+    height: 35px;
+    width: 35px;
+    margin-top: 0;
+  }
+
+  #navbar-brand {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 922px) {
+  #navigation {
+    padding: 1.5rem 5% 1.5rem 5%;
+  }
+}
+
+@media (max-width: 830px) {
+  .navbar-logo {
+    height: 32px;
+    width: 32px;
+    margin-top: 0;
+  }
+
+  #navbar-brand {
+    font-size: 1.5rem;
+  }
+
+  #navigation {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 390px) {
+  .navbar-logo {
+    height: 28px;
+    width: 28px;
+    margin-top: 0;
+  }
+
+  #navbar-brand {
+    font-size: 1.25rem;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 336px) {
+  .navbar-logo {
+    height: 26px;
+    width: 26px;
+    margin-top: 0;
+  }
+
+  #navbar-brand {
+    font-size: 1.2rem;
+  }
+}
+
+li.nav-link > a {
+  color: inherit !important;
+}
+
+/* === FOOTER === */
+
+.footer {
+  height: auto;
+  background-color: #3d3f45;
+  padding: 30px 0 15px 0;
+  color: #FFF;
+}
+
+/* Bei kleinen Geräten */
+
+@media (min-width:1px) {
+  .footer ul {
+    margin: 20px 0 0 0;
+    padding-left: 0;
+  }
+}
+
+/* Ab größeren Tablets und kleinere Laptops */
+
+@media (min-width:1025px) {
+  .footer ul {
+    margin: 0;
+    float: right;
+  }
+}
+
+.footer ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.footer ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer ul li a:hover {
+  color: #dd5638;
+  cursor: pointer;
+}
+
+.footer ul li a:active {
+  color: #dd5638;
+}
+
+.footer ul li a:focus {
+  color: #dd5638;
+}
+
+/* === STARTSEITE === */
+
+/* === BANNER-BEREICH === */
+
+#headerbild {
+  background: url("./../img/hero-bg.jpg") no-repeat center center;
+  background-position: 50% 0;
+  min-height: 500px;
+  position: relative;
+}
+
+#headerbild2 {
+  background: url("./../img/hero-bg-klein.jpg") no-repeat center center;
+  background-position: 50% 0;
+  min-height: 300px;
+  color: white;
+  text-align: center;
+  position: relative;
 }
 
 .white-layer-top-header {
@@ -180,142 +323,6 @@ input[type="color"]:focus,
   margin: auto;
 }
 
-.sidebar-search {
-  border-radius: 0;
-  width: 100%;
-  padding: .4rem .6rem;
-}
-
-/* === NAVIGATION === */
-
-#navigation {
-  font-size: 1.2rem;
-  padding: 20px 10% 0 10%;
-}
-
-#navbar-brand {
-  font-size: 2rem;
-}
-
-@media (max-width:992px) {
-  .navbar-logo {
-    height: 30px;
-    width: 30px;
-    margin-top: 12px;
-  }
-
-  .brand-name {
-    font-size: 1.2rem;
-    font-weight: 600;
-  }
-
-  #navbar {
-    font-size: 0.9rem;
-    padding-top: 10px;
-  }
-}
-
-@media (max-width:466px) {
-  .navbar-logo {
-    height: 30px;
-    width: 30px;
-    margin-top: 12px;
-  }
-
-  .brand-name {
-    font-size: 1.2rem;
-    font-weight: 600;
-  }
-}
-
-@media (max-width:322px) {
-  .navbar-logo {
-    height: 25px;
-    width: 25px;
-    margin-top: 15px;
-  }
-
-  .brand-name {
-    font-size: 1.1rem;
-    font-weight: 600;
-  }
-}
-
-li.nav-link > a {
-  color: inherit !important;
-}
-
-/* === FOOTER === */
-
-.footer {
-  height: auto;
-  background-color: #3d3f45;
-  padding: 30px 0 15px 0;
-  color: #FFF;
-}
-
-/* Bei kleinen Geräten */
-
-@media (min-width:1px) {
-  .footer ul {
-    margin: 20px 0 0 0;
-    padding-left: 0;
-  }
-}
-
-/* Ab größeren Tablets und kleinere Laptops */
-
-@media (min-width:1025px) {
-  .footer ul {
-    margin: 0;
-    float: right;
-  }
-}
-
-.footer ul li {
-  display: inline-block;
-  margin-right: 20px;
-}
-
-.footer ul li a {
-  color: #ffffff;
-  text-decoration: none;
-  transition: color 0.3s ease-in-out;
-}
-
-.footer ul li a:hover {
-  color: #dd5638;
-  cursor: pointer;
-}
-
-.footer ul li a:active {
-  color: #dd5638;
-}
-
-.footer ul li a:focus {
-  color: #dd5638;
-}
-
-/* === STARTSEITE === */
-
-/* === HEADERBILD === */
-
-#headerbild {
-  background: url("./../img/hero-bg.jpg") no-repeat center center;
-  background-position: 50% 0;
-  min-height: 500px;
-  position: relative;
-}
-
-#headerbild2 {
-  background: url("./../img/hero-bg-klein.jpg") no-repeat center center;
-  background-position: 50% 0;
-  min-height: 300px;
-  color: white;
-  text-align: center;
-  position: relative;
-}
-
 /* === HERO-BEREICH === */
 
 #logo-icon:hover {
@@ -331,7 +338,7 @@ li.nav-link > a {
   transform: rotate(360deg);
 }
 
-.btn-typ-1 {
+.btn-typ-1:link {
   height: 60px;
   background-color: transparent;
   border: 2px solid #3d3f45;
@@ -339,21 +346,26 @@ li.nav-link > a {
   color: #3d3f45;
   font-weight: bold;
   transition: border 0.5s ease-in-out;
-  padding: 0 35px 0 35px;
+  padding: 1rem 2rem 0 2rem;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  text-decoration: none;
+}
+
+.btn-typ-1:visited {
+  border: 2px solid #3d3f45;
+  color: #3d3f45;
+}
+
+.btn-typ-1:active{
+  border: 2px solid #3d3f45;
+  cursor: pointer;
 }
 
 .btn-typ-1:hover {
   border: 2px solid #dd5638;
   cursor: pointer;
-}
-
-.btn-typ-1:active {
-  border: 2px solid #dd5638;
-  color: #A69292;
-}
-
-.btn-typ-1:focus {
-  outline: 1px solid #dd5638;
 }
 
 /* Bei kleinen Geräten */
@@ -476,7 +488,7 @@ li.nav-link > a {
   transform: rotate(-1deg);
   transform: skew(0deg,-1deg);
   position: absolute;
-  top: 15px;
+  top: 25px;
   z-index: 1;
 }
 
@@ -497,7 +509,7 @@ li.nav-link > a {
   transform: rotate(-1deg);
   transform: skew(0deg,-1deg);
   position: absolute;
-  bottom: -20px;
+  bottom: -18px;
   z-index: 1;
 }
 
@@ -783,6 +795,24 @@ li.nav-link > a {
   color: #000 !important;
 }
 
+.blogpost-teaser .moretag:link {
+  color: #dd5638;
+}
+
+.blogpost-teaser .moretag:active {
+  color: #dd5638;
+}
+
+.blogpost-teaser .moretag:visited {
+  color: #dd5638;
+}
+
+.blogpost-teaser .moretag:hover {
+  color: #dd5638;
+  position: relative;
+  left: .1rem;
+}
+
 /* === WIDGETS === */
 
 .widget {
@@ -831,6 +861,29 @@ li.nav-link > a {
 .widget ul li a:hover,
 .widget a.tag-cloud-link {
   color: #dd5638;
+}
+
+.sidebar-search {
+  border-radius: 0;
+  width: calc(100% - 35px);
+  height: 35px;
+  padding: .4rem .6rem;
+  float: left;
+  border-right: none;
+  margin-top: 8px;
+}
+
+.search-button {
+  height: 35px;
+  width: 35px;
+  float: right;
+  background: rgba(226, 226, 226, 0.7);
+  border-right: 1px solid rgba(0,0,0,.15);
+  border-top: 1px solid rgba(0,0,0,.15);
+  border-bottom: 1px solid rgba(0,0,0,.15);
+  border-left: none;
+  margin-top: 8px;
+  color: #3d3f45;
 }
 
 .tag-cloud-link {
