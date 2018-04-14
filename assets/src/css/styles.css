@@ -415,23 +415,28 @@ li.nav-link > a {
 
 /* === VIDEO-BEREICH === */
 
-/* Bei kleinen Geräten */
-
-@media (min-width:1px) {
-  #promo-video {
-    width: 90%;
-    margin: 20px 0 0 0;
-  }
+.responsive-video-container {
+  width: 60%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* Ab größeren Tablets und kleinere Laptops */
-
-@media (min-width:1025px) {
-  #promo-video {
-    width: 50%;
-    margin: 20px 0 0 0;
+.responsive-video {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 0px;
+  height: 0;
+  overflow: hidden;
   }
-}
+
+.responsive-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  }
 
 /* === ZITAT-BEREICH === */
 

@@ -4,18 +4,26 @@
 
 <!-- KURSE -->
 
+<?php
+
+//Advanced Custom Fields
+$ueberschrift_kurse_seite         =   get_field("ueberschrift_kurse_seite");
+$einleitungstext_kurse_seite      =   get_field("einleitungstext_kurse_seite");
+
+?>
+
 <section class="text-zentriert">
 
   <div class="container spacer-md-top spacer-xl-bottom">
     <div class="row">
       <div class="col-12">
         <div class="introduction">
-          <h1>#KURSE</h1>
-          <p class="haupttext">
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
-          magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
-          gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-          </p>
+          <?php if( !empty($ueberschrift_kurse_seite) ) : ?>
+          <h1><?php echo $ueberschrift_kurse_seite; ?></h1>
+          <?php endif; ?>
+          <?php if( !empty($einleitungstext_kurse_seite) ) : ?>
+          <p class="haupttext"><?php echo $einleitungstext_kurse_seite; ?></p>
+          <?php endif; ?>
         </div>
       </div>
     </div>

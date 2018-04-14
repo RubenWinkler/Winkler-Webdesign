@@ -1,4 +1,4 @@
-<?php /* Template Name: Blog Template */ ?>
+<?php /* Template Name: Kategorie Template */ ?>
 
 <?php get_header( "v2" ); ?>
 
