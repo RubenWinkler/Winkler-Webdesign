@@ -19,10 +19,10 @@
                 <div class="col-12">
                     <h1><?php the_title(); ?></h1>
                     <div class="blogpost-meta">
-                        <i class="fa fa-user"></i>  <a href="<?php echo get_author_posts_url(get_the_author_meta("ID")); ?>"><?php the_author(); ?></a>
-                        <i class="far fa-calendar-alt"></i> <time><?php echo get_the_date("d. F Y"); ?></time>
-                        <i class="fa fa-folder"></i> <?php the_category(", "); ?>
-                        <i class="fa fa-tags"></i> <?php the_tags(); ?>
+                        <i class="fa fa-user"></i> <span><a href="<?php echo get_author_posts_url(get_the_author_meta("ID")); ?>"><?php the_author(); ?></a></span>
+                        <i class="far fa-calendar-alt"></i> <span><time><?php echo get_the_date("d. F Y"); ?></time></span>
+                        <i class="fa fa-folder"></i> <span><?php the_category(", "); ?></span>
+                        <i class="fa fa-tags"></i> <span><?php the_tags(); ?></span>
                     </div>
                     <?php the_post_thumbnail("full", array("class" => "blog-thumbnail")); ?>
                     <div class="blog-text">

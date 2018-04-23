@@ -55,3 +55,5 @@ function wpdev_filter_login_head() {
 }
  
 add_action( 'login_head', 'wpdev_filter_login_head', 100 );
+
+add_filter( 'wpcf7_autop_or_not', '__return_false' );

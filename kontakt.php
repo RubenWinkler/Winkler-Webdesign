@@ -4,45 +4,36 @@
 
 <!-- KONTAKT -->
 
+<?php
+
+//Advanced Custom Fields
+$ueberschrift_kontakt_seite       =       get_field("ueberschrift_kontakt_seite");
+$einleitungstext_kontakt_seite    =       get_field("einleitungstext_kontakt_seite");
+
+?>
+
 <section class="text-zentriert">
 
   <div class="container spacer-md-top spacer-xl-bottom">
     <div class="row">
       <div class="col-12">
         <div class="introduction">
-          <h1>#KONTAKT</h1>
+          <?php if( !empty($ueberschrift_kontakt_seite) ) : ?>
+          <h1><?php echo $ueberschrift_kontakt_seite; ?></h1>
+          <?php endif; ?>
+          <?php if( !empty($einleitungstext_kontakt_seite) ) : ?>
           <p class="haupttext">
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
-          magna aliquyam erat, sed diam voluptua.
+          <?php echo $einleitungstext_kontakt_seite; ?>
           </p>
+          <?php endif; ?>
         </div>
       </div>
     </div>
-    <form action="" method="">
-      <div class="row">
-        <div class="col-6">
-          <input type="text" name="vorname" placeholder="Vorname" class="input-on-light" required>
-        </div>
-        <div class="col-6">
-          <input type="text" name="nachname" placeholder="Nachname" class="input-on-light" required>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-12">
-          <input type="text" name="email" placeholder="E-Mail Adresse" class="input-on-light" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-12">
-          <textarea rows="10" cols="1" name="nachricht" placeholder="Deine Nachricht" class="textarea-on-light" required></textarea>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-2">
-          <button type="submit" name="absenden" class="btn-typ-2">Senden</button>
-        </div>
-      </div>
-    </form>
+
+    <?php echo do_shortcode( '[contact-form-7 id="292" title="Kontakt-Formular"]' ); ?>
+
+
+    
   </div>
 
 </section>

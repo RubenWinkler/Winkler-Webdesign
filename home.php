@@ -36,12 +36,11 @@
 
                     <article class="blogpost-teaser">
                         <header>
-                            <h3 class="blogpost-teaser-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                            <h2 class="blogpost-teaser-title"><a href="<?php the_permalink(); ?>">#<?php the_title(); ?></a></h2>
                             <div class="blogpost-teaser-meta">
-                                <i class="fa fa-user"></i> <a href="<?php echo get_author_posts_url(get_the_author_meta("ID")); ?>"><?php the_author(); ?></a>
-                                <i class="far fa-calendar-alt"></i> <time><?php echo get_the_date("d. F Y"); ?></time>
-                                <i class="fa fa-folder"></i> <?php the_category(", "); ?>
-                                <i class="fa fa-tags"></i> <?php the_tags(); ?>
+                                <i class="far fa-calendar-alt"></i> <span><time><?php echo get_the_date("d. F Y"); ?></time></span>
+                                <i class="fa fa-folder"></i> <span><?php the_category(", "); ?></span>
+                                <i class="fa fa-tags"></i> <span><?php the_tags(); ?></span>
                             </div>
                         </header>
 
